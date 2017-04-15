@@ -1,0 +1,43 @@
+{
+  "name": "Github Review Randomizer",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Select a random reviewer for your Github pull requests.",
+  "homepage_url": "https://github.com/bananatron/github-review-randomizer",
+  "icons": {
+    "16": "icons/randomizer_16.png",
+    "48": "icons/randomizer_48.png",
+    "128": "icons/randomizer_128.png"
+  },
+  "default_locale": "en",
+  "page_action": {
+    "default_icon": "icons/randomizer_19.png",
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "permissions": [
+    "https://github.com/*",
+    "https://www.github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.github.com/*",
+        "https://github.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.github.com/*",
+        "https://github.com/*"
+      ],
+      "js": [
+        "src/inject/jquery-3.2.1.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
