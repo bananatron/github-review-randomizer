@@ -10,3 +10,8 @@ A tiny chrome extention that adds a randomize button to your github PR dropdown.
 - Open `chrome://extensions/`
 - Drag the CRX file into the Chrome extensions window/tab
 - Start **randomizing** on any Github PR 🎉
+
+
+## Contribution
+- Make a PR
+- I'll test it + package the extension?
